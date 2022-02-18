@@ -1,25 +1,83 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment, useCallback, useState } from "react";
+import {
+  BrowserRouter as Router,
+  Redirect,
+  Route,
+  Switch,
+} from "react-router-dom";
+import Quizzes from "./quizzes/pages/Quizzes";
+// import Button from "./shared/Button";
 
-function App() {
+// import "./declare_modules.d.js";
+import MainNavigation from "./shared/components/Navigation/MainNavigation";
+import "./App.css";
+import Auth from "./users/pages/Auth";
+import ImagePack from "./quizzes/components/ImageDetect/ImagePack";
+import { AuthContext } from "./shared/context/auth-context";
+import Start from "./quizzes/components/ReadingTest/Start";
+
+const App = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const login = useCallback(() => {
+    setIsLoggedIn(true);
+  }, []);
+  const logout = useCallback(() => {
+    setIsLoggedIn(false);
+  }, []);
+
+  let routes;
+
+  if (isLoggedIn) {
+    console.log("HIII");
+    routes = (
+      <Switch>
+        <Route path="/" exact>
+          <Quizzes />
+        </Route>
+        <Route path="/quiz/1">
+          <Start />
+        </Route>
+        <Route path="/quiz/4">
+          <ImagePack />
+        </Route>
+        <Redirect to="/" />
+      </Switch>
+    );
+  } else {
+    routes = (
+      <Switch>
+        <Route path="/auth" exact>
+          <Auth />
+          {/* <Quiz quiz={quiz} /> */}
+        </Route>
+        <Redirect to="/auth" />
+      </Switch>
+    );
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthContext.Provider
+      value={{ isLoggedIn: isLoggedIn, login: login, logout: logout }}
+    >
+      <Router>
+        <MainNavigation />
+        <main>
+          {/* <Route path="/" exact>
+              <Quizzes />
+            </Route>
+            <Route path="/auth" exact>
+              <Auth />
+            </Route>
+            <Route path="/quiz/4">
+              <ImagePack />
+            </Route>
+            <Redirect to="/" /> */}
+          {routes}
+        </main>
+      </Router>
+    </AuthContext.Provider>
   );
-}
+};
 
 export default App;

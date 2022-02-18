@@ -1,0 +1,77 @@
+/* .left {
+  width: 100%;
+} */
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.left-container {
+  /* display: flex; */
+  margin-top: 3rem;
+  width: 76%;
+  margin-left: 5rem;
+}
+.right-container {
+  /* position: top; */
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* align-items: flex-start; */
+  /* margin-top: 4%; */
+  /* text-align: center; */
+  /* margin-right: 5%; */
+  /* width: 20%; */
+  border-left: 6px solid green;
+  /* display: block; */
+  /* height: 121vh; */
+}
+.butt {
+  /* position: center; */
+  /* margin-top: 2rem; */
+  /* display: flex; */
+  /* height: 3.8rem; */
+  margin: auto;
+  /* padding-top: 20%; */
+  /* width: 50%; */
+  /* border: 3px solid green; */
+  /* padding: 10px; */
+  /* padding: 10rem 1rem; */
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  padding-left: 2rem;
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+.btn {
+  /* text-decoration-color: whitesmoke; */
+  /* color: whitesmoke; */
+  /* padding-top: 20rem; */
+  /* margin-bottom: -101rem; */
+  /* margin-top: 102rem; */
+
+  /* display: flex; */
+  /* height: 3.8rem; */
+
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* margin-left: 20rem; */
+  /* width: 80%; */
+  /* margin-top: 100px; */
+  /* position: center; */
+  height: 60px;
+  /* border: 3px solid green; */
+}
+@media screen and (max-width: 590px) {
+  /* body {
+    background-color: lightgreen;
+  } */
+  .butt {
+    display: none;
+  }
+  .left-container {
+    width: 100%;
+  }
+}

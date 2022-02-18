@@ -1,0 +1,23 @@
+/* {
+  box-sizing: border-box;
+} */
+.quiz4 {
+  background: #101427 !important;
+  width: 90%;
+  max-width: 43rem;
+  padding: 0.7rem;
+  /* height: 75vh; */
+  border-radius: 12px;
+  /* background-color: white; */
+  margin: 3rem auto;
+  margin-top: 4.6rem;
+  /* background: white; */
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26); */
+}
+/* result{
+
+} */
+.result a {
+  text-decoration: none;
+  color: black;
+}
