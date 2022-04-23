@@ -1,0 +1,18 @@
+.ini-time {
+  display: flex;
+  justify-content: space-around;
+  font-family: sans-serif;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.time {
+  font-size: 32px;
+  /* margin-left: 2; */
+}
+.timee {
+  font-size: 20px;
+}
+.timeee {
+  font-size: 26px;
+}

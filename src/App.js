@@ -15,6 +15,7 @@ import Auth from "./users/pages/Auth";
 import ImagePack from "./quizzes/components/ImageDetect/ImagePack";
 import { AuthContext } from "./shared/context/auth-context";
 import Start from "./quizzes/components/ReadingTest/Start";
+import ColorStart from "./quizzes/components/ColorNaming/ColorStart";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -37,6 +38,9 @@ const App = () => {
         </Route>
         <Route path="/quiz/1">
           <Start />
+        </Route>
+        <Route path="/quiz/3">
+          <ColorStart />
         </Route>
         <Route path="/quiz/4">
           <ImagePack />

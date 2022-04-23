@@ -1,0 +1,16 @@
+.color-box {
+  /* background-color: #f00; */
+  color: antiquewhite;
+  /* margin: auto; */
+  margin-left: 3rem;
+  margin-top: 1.7rem;
+  /* font-size: 16px; */
+}
+.timer-box {
+  margin: auto;
+  margin-top: -2.2rem;
+  /* margin-bottom: -1rem; */
+  width: 10%;
+  /* border: 5px solid #ffff00; */
+  padding: 10px;
+}
