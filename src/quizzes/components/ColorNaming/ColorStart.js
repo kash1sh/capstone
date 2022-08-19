@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import React from "react";
 import ColorBox from "./ColorBox";
 import "./ColorStart.css";
+import Audio from "./Audio";
 import Timer from "./Timer";
 
 const ColorStart = () => {
@@ -45,6 +46,7 @@ const ColorStart = () => {
 
         {/* Hii */}
       </div>
+      <Audio />
     </div>
   );
 };

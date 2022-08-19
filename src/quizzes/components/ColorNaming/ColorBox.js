@@ -21,7 +21,7 @@ const ColorBox = (props) => {
             paddingRight: "1rem",
             backgroundColor: props.col,
             "&:hover": {
-              backgroundColor: "primary.main",
+              backgroundColor: "white",
               opacity: [0.9, 0.8, 0.7],
             },
           }}

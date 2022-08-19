@@ -57,24 +57,28 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 import "./styles.css";
 
-const minuteSeconds = 60;
-const hourSeconds = 3600;
-const getTimeSeconds = (time) => (minuteSeconds - time) | 0;
-const getTimeMinutes = (time) => ((time % hourSeconds) / minuteSeconds) | 0;
+const zeroPad = (num, places) => String(num).padStart(places, "0");
 const renderTime = (dimension, time) => {
-  const val = time / 60;
-  const rem = time % 60;
-  const num = parseInt(val);
+  let v = time / 60;
+  let val = v.toString();
+  // val = "0" + val;
+  let rem = time % 60;
+  let num = parseInt(val);
+  num = zeroPad(num, 2);
+  if (rem < 10) {
+    rem = "0" + rem;
+  }
   return (
     <div className="time-wrapper">
       <div className="timeee">Remaining </div>
       <div className="time">
-        {" "}
-        {num} {rem}
+        {num} {"           "} {rem}
       </div>
       {/* <div className="timee">time minutes</div> */}
       {/* <div className="time">{time}</div> */}
-      <div className="timee">mins {dimension}</div>
+      <div className="timee">
+        <span>minutes</span> {"  "} {dimension}
+      </div>
     </div>
   );
 };
@@ -85,14 +89,14 @@ const timerProps = {
   strokeWidth: 6,
 };
 const Timer = () => {
-  const remainingTime = 2;
+  // const remainingTime = 2;
   const history = useHistory();
   return (
     <div className="ini-time">
       <CountdownCircleTimer
         {...timerProps}
         strokeLinecap="square"
-        duration={120}
+        duration={25}
         colors="#EF798A"
         // colors={["#004777", "#F7B801", "#A30000", "#A30000"]}
         colorsTime={[40, 35, 20, 50]}

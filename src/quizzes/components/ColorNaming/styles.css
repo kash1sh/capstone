@@ -7,8 +7,12 @@
 }
 
 .time {
-  font-size: 32px;
-  /* margin-left: 2; */
+  font-size: 36px;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.time span {
+  /* margin-right: 2rem; */
 }
 .timee {
   font-size: 20px;
