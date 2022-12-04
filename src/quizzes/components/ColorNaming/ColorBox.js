@@ -6,16 +6,16 @@ import "./ColorBox.css";
 const ColorBox = (props) => {
   return (
     <div>
-      <Grid item xs={3}>
+      <Grid item xs={8} md={4}>
         {/* {colors.map((color, index) => (
             <ColorBox col={color} />
           ))} */}
         <Box
           sx={{
-            width: 200,
-            height: 200,
-            marginRight: "2rem",
-            marginLeft: "2rem",
+            width: 155,
+            height: 140,
+            marginRight: "3.5rem",
+            marginLeft: "4.5rem",
             marginTop: "1rem",
             marginBottom: "1rem",
             paddingRight: "1rem",

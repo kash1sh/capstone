@@ -1,3 +1,19 @@
+.auth {
+  /* background: linear-gradient(
+      to bottom,
+      rgba(45, 46, 50, 0.92),
+      rgba(10, 0, 0, 0.7)
+    ), */
+  margin: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../../public/static/images/brain4.jpeg");
+  background-size: cover;
+  height: 100vh;
+  /* margin-top: -5%; */
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-image: linear-gradient(red, yellow, blue); */
+}
 .authentication__header {
   color: white;
   text-align: center;
@@ -6,11 +22,125 @@
 .authentication {
   width: 90%;
   max-width: 33rem;
-  margin: 7rem auto;
+  margin: 6rem auto;
+  margin-top: 0;
   text-align: center;
   color: black;
 }
 
 .authentication form {
-  margin-bottom: 1rem;
+  /* margin-top: 6rem; */
+  margin-bottom: 0.6rem;
+}
+
+.heading {
+  text-align: center;
+
+  vertical-align: middle;
+  margin: 5% auto;
+  color: rgba(221, 224, 225, 0.788);
+  /* text-shadow: 4px 5px 2px rgba(34, 164, 219, 0.3); */
+  text-shadow: 4px 3px 0px rgba(34, 164, 219, 0.3),
+    9px 8px 0px rgba(172, 174, 177, 0.096);
+  font-size: x-large;
+  font-weight: 900;
+  margin-bottom: 0;
+}
+/* rgba(34, 164, 219, 0.3); */
+/* rgba(58, 179, 232, 0.3); */
+.BrainDiv {
+  width: 280px;
+
+  margin: auto;
+  margin-top: -2%;
+  animation: levitation 7s ease infinite alternate;
+}
+
+.ShadowDiv {
+  width: 150px;
+
+  animation: ShadowAnimation 7s ease infinite alternate;
+}
+
+.som {
+  fill: rgba(10, 12, 16, 0.8);
+}
+
+.st0 {
+  fill: none;
+
+  stroke: #edf1f7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+
+  animation: blessed 7s ease infinite alternate;
+}
+
+.st1 {
+  fill: #ef7668;
+}
+
+.st2 {
+  fill: #333333;
+}
+
+.st3 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+
+  fill: #4f7f83;
+}
+
+.st4 {
+  fill: #ef564b;
+}
+
+.st5 {
+  fill: #441165;
+}
+
+@keyframes levitation {
+  0%,
+  100% {
+    transform: translate(0, 2px);
+  }
+
+  50% {
+    transform: translate(0, 25px);
+  }
+
+  80% {
+    transform: translate(0, -60px);
+  }
+}
+
+@keyframes ShadowAnimation {
+  0%,
+  100% {
+    transform: scale(0.4);
+  }
+
+  50% {
+    transform: scale(0.9);
+  }
+
+  80% {
+    transform: scale(0.1);
+  }
+}
+
+@keyframes blessed {
+  0%,
+  100% {
+    stroke-width: 15;
+  }
+
+  50% {
+    stroke-width: 15;
+  }
+
+  80% {
+    stroke-width: 30;
+  }
 }

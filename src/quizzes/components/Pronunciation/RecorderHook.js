@@ -25,10 +25,7 @@ export default function RecorderHooks(props) {
     }
     // console.log(data.url);
     props.fetchedUrl(data.url);
-    if (props.newUrl) {
-      stop();
-    }
-  }, [data.url, props, stop]);
+  }, [data.url, props]);
 
   return (
     <>
@@ -43,7 +40,7 @@ export default function RecorderHooks(props) {
             setHasRecording(false);
           }
         }}
-        style={{ marginTop: "-20px" }}
+        style={{ margin: "10px" }}
         variant="contained"
         startIcon={<MicIcon />}
       >

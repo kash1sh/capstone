@@ -15,26 +15,26 @@ const infoCards = [
   {
     color: "#0d98ba",
     title: "Pronounciation Test",
-    info: "The Child has to read the sentence that appears ",
-    text: "Improvement in Reading Skills",
+    info: "The Child has to read each word of the sentence that appears ",
+    text: "To test the perplexity of the child for pronouncing words correctly",
   },
   {
     color: "#1565c0",
-    title: "Writing Test",
-    info: "The Child has to write the given words",
-    text: "Improvement in Writing Skills",
+    title: "Spelling Orientation Test",
+    info: "Listen to a word and write its correct spelling",
+    text: "Aims to evaluate letter orientation of similar alphabets",
   },
   {
     color: "#4527a0",
-    title: "Colour Test",
-    info: "The Child has quickly identify the colors in front of him",
-    text: "Improvement in performance under pressure scenarios",
+    title: "Rapid Colour Naming Test",
+    info: "The Child has to quickly speak out the colors in the grid",
+    text: "Aims to evaluate the ability to check the fluency in speech rapidly",
   },
   {
     color: "#536895",
-    title: "Image Identification Test",
-    info: "The Child has to pick the correct name for the image",
-    text: "Improvement in identification ability",
+    title: "Object Classification Test",
+    info: "The Child has to pick the correct option for the image",
+    text: "Aims to evaluate spelling orientation based on object classification ",
   },
 ];
 
@@ -56,7 +56,7 @@ const QuizCard = () => {
           className={classes.container}
           container
           alignItems="stretch"
-          spacing={3}
+          spacing={2}
         >
           {infoCards.map((infoCard, index) => (
             // <div>

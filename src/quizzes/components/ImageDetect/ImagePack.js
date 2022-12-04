@@ -19,8 +19,8 @@ const RenderCustomResultPage = (obj) => {
 
   const width = window.innerWidth;
   const height = window.innerHeight;
-  console.log("HI");
-  console.log(obj);
+  // console.log("HI");
+  // console.log(obj);
   const f = obj.correctPoints === obj.totalPoints;
   return (
     <div className="result">

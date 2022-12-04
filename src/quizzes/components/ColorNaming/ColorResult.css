@@ -31,7 +31,7 @@
   cursor: pointer;
 }
 
-.quest-card {
+.quest-cardd {
   /* margin-top: 1rem; */
   padding: 0.8rem;
 }
@@ -41,26 +41,50 @@
   justify-content: center;
   margin-left: -0.5rem;
 }
-.react-quiz-container .startQuizWrapper .startQuizBtn {
+.card-color {
+  margin-top: 14%;
+}
+.react-quiz-containers {
   /* margin: auto; */
   font-size: 20px;
+
   /* width: 100%; */
   /* margin-left: 12rem; */
   /* margin: auto; */
   /* display: flex; */
   /* justify-content: center; */
   /* align-items: center; */
+  margin-top: 4%;
+  margin-left: 15%;
+  width: 70%;
   border-radius: 2px;
   line-height: 1.35135;
   color: rgba(0, 0, 0, 0.65);
-  background-color: #fff;
-  border: 1px solid #d9d9d9;
+  /* background-color: #fff; */
+  border: 1px solid #d9d9d9 bottom;
 }
 
-.react-quiz-container .quiz-synopsis {
+/* h4 {
+  font-weight: 800;
+} */
+.startQuizWrapper .startQuizBtns {
+  background-color: #181f42 !important;
+  color: whitesmoke !important;
+  padding-left: 32px;
+  width: 9%;
+}
+
+.quiz-titles {
+  margin-bottom: 3rem;
+  font-size: large;
+  font-weight: 900;
+}
+.react-quiz-container .quiz-synopsiss {
   /* size medium */
-  font-size: 1.2rem;
-  margin: 15px 0px;
+  font-size: 1.6rem;
+  /* font-weight: 700; */
+  /* margin: 15px 0px; */
+  margin: auto 17%;
 }
 
 @media screen and (max-width: 430px) {

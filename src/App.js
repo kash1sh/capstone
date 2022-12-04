@@ -15,18 +15,22 @@ import Auth from "./users/pages/Auth";
 import ImagePack from "./quizzes/components/ImageDetect/ImagePack";
 import { AuthContext } from "./shared/context/auth-context";
 import Start from "./quizzes/components/ReadingTest/Start";
+import Pronounce from "./quizzes/components/Pronunciation/Pronounce";
 import ColorStart from "./quizzes/components/ColorNaming/ColorStart";
 import ColorResult from "./quizzes/components/ColorNaming/ColorResult";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  const login = useCallback(() => {
+  const [token, setToken] = useState(false);
+  const login = useCallback((token) => {
+    setToken(token);
     setIsLoggedIn(true);
   }, []);
   const logout = useCallback(() => {
     setIsLoggedIn(false);
   }, []);
+
+  console.log(token);
 
   let routes;
 
@@ -38,7 +42,7 @@ const App = () => {
           <Quizzes />
         </Route>
         <Route path="/quiz/1">
-          <Start />
+          <Pronounce />
         </Route>
         <Route path="/quiz/3">
           <ColorResult />
@@ -64,7 +68,12 @@ const App = () => {
 
   return (
     <AuthContext.Provider
-      value={{ isLoggedIn: isLoggedIn, login: login, logout: logout }}
+      value={{
+        isLoggedIn: isLoggedIn,
+        login: login,
+        logout: logout,
+        token: token,
+      }}
     >
       <Router>
         <MainNavigation />

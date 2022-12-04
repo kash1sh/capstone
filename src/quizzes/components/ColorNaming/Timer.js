@@ -88,7 +88,7 @@ const timerProps = {
   size: 210,
   strokeWidth: 6,
 };
-const Timer = () => {
+const Timer = ({ handleAudio }) => {
   // const remainingTime = 2;
   const history = useHistory();
   return (
@@ -96,7 +96,7 @@ const Timer = () => {
       <CountdownCircleTimer
         {...timerProps}
         strokeLinecap="square"
-        duration={25}
+        duration={5}
         colors="#EF798A"
         // colors={["#004777", "#F7B801", "#A30000", "#A30000"]}
         colorsTime={[40, 35, 20, 50]}
@@ -104,7 +104,8 @@ const Timer = () => {
         onComplete={() => {
           // do your stuff here
           // return { shouldRepeat: true, delay: 1.5 } // repeat animation in 1.5 seconds
-          history.push("/");
+          // history.push("/");
+          handleAudio();
         }}
       >
         {({ remainingTime, color }) => (

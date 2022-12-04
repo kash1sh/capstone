@@ -46,7 +46,7 @@ const ColorResult = () => {
   }, []);
 
   return (
-    <div className="react-quiz-container">
+    <div className="react-quiz-containers">
       {start && <ColorStart />}
       <div className="questionWrapper">
         {!start && (
@@ -72,10 +72,10 @@ const ColorResult = () => {
           //     Start
           //   </Button>
           // </div>
-          <div>
-            <Card className="quest-card" variant="outlined">
+          <div className="card-color">
+            <Card className="quest-cardd" variant="outlined">
               {/* <h2>{quiz.quizTitle}</h2> */}
-              <div className="quiz-title">
+              <div className="quiz-titles">
                 <Typography variant="h4" align="center" gutterBottom>
                   Speed Color Naming Quiz
                 </Typography>
@@ -83,9 +83,9 @@ const ColorResult = () => {
 
               <div className="quiz-syn">
                 <Typography paragraph>
-                  <div className="quiz-synopsis">
-                    You have 2 minutes to answer the questions. You will be
-                    redirected to the score page after 10 minutes.
+                  <div className="quiz-synopsiss">
+                    You have 30 seconds to answer the questions. You will be
+                    redirected to the score page after 30 seconds.
                   </div>
                 </Typography>
               </div>
@@ -96,7 +96,7 @@ const ColorResult = () => {
                   align="center"
                   size="large"
                   onClick={() => setStart(true)}
-                  className="startQuizBtn btn"
+                  className="startQuizBtns btn"
                 >
                   Start
                 </Button>
