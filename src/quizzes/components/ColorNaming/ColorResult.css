@@ -42,7 +42,7 @@
   margin-left: -0.5rem;
 }
 .card-color {
-  margin-top: 14%;
+  margin-top: 10%;
 }
 .react-quiz-containers {
   /* margin: auto; */
@@ -75,7 +75,7 @@
 }
 
 .quiz-titles {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   font-size: large;
   font-weight: 900;
 }

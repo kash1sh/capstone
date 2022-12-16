@@ -83,6 +83,8 @@ const Auth = () => {
           }
         );
         // auth.login();
+        // auth.login();
+        console.log(responseData.token);
         auth.login(responseData.token);
         // auth.login(responseData.userId, responseData.token);
       } catch (err) {}

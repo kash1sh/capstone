@@ -3,14 +3,25 @@
   color: antiquewhite;
   /* margin: auto; */
   margin-left: 3rem;
-  margin-top: 1.7rem;
+  margin-top: 0.8rem;
   /* font-size: 16px; */
 }
 .timer-box {
   margin: auto;
-  margin-top: -2.2rem;
+  margin-top: -3.2rem;
   /* margin-bottom: -1rem; */
   width: 10%;
   /* border: 5px solid #ffff00; */
   padding: 10px;
+}
+.score-text {
+  margin-top: 20rem;
+  text-align: center;
+  color: white;
+}
+
+.btn-style2 {
+  margin-top: 8%;
+  position: absolute;
+  margin-left: 52%;
 }

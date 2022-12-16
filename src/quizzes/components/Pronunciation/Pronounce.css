@@ -2,9 +2,11 @@
   /* display: flex; */
   /* justify-content: center; */
   /* margin-left: 30%; */
-  width: 40%;
+  width: 30%;
   /* display: flex; */
-  margin: 10% auto;
+  margin: 9% auto;
+  padding-top: 1%;
+  /* padding-left: -2rem; */
   /* height: 50%; */
   /* align-items: center; */
   font-size: 1rem;
@@ -25,7 +27,7 @@
 
 .dynamic-names {
   font-size: x-large;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .next-icon {
@@ -34,4 +36,22 @@
   justify-content: end;
   align-items: center;
   /* size: 10rem; */
+}
+
+.dynamic-names {
+  text-align: center;
+}
+.card-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.btn-style {
+  margin-top: 3%;
+  margin-bottom: 2%;
+  align-self: center;
+}
+.audio-style {
+  align-self: center;
 }

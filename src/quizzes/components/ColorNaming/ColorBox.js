@@ -1,33 +1,58 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import { Item } from "@material-ui/core";
-import { Grid } from "@material-ui/core";
+import { Grid, Grow } from "@material-ui/core";
+import { Container, Row } from "react-grid-system";
+
 import "./ColorBox.css";
 const ColorBox = (props) => {
   return (
     <div>
-      <Grid item xs={8} md={4}>
-        {/* {colors.map((color, index) => (
-            <ColorBox col={color} />
-          ))} */}
-        <Box
-          sx={{
-            width: 155,
-            height: 140,
-            marginRight: "3.5rem",
-            marginLeft: "4.5rem",
-            marginTop: "1rem",
-            marginBottom: "1rem",
-            paddingRight: "1rem",
-            backgroundColor: props.col,
-            "&:hover": {
-              backgroundColor: "white",
-              opacity: [0.9, 0.8, 0.7],
-            },
-          }}
-        />
-      </Grid>
-
+      <Grow in>
+        {/* <Grid item xs={8} md={4}> */}
+        {/* <Grid spacing={2}>
+          
+          <Box
+            sx={{
+              width: 155,
+              height: 140,
+              marginRight: "3.5rem",
+              marginLeft: "4.5rem",
+              marginTop: "1rem",
+              marginBottom: "1rem",
+              paddingRight: "1rem",
+              backgroundColor: props.col,
+              "&:hover": {
+                backgroundColor: "white",
+                opacity: [0.9, 0.8, 0.7],
+              },
+            }}
+          />
+        </Grid> */}
+        <Container>
+          <Row>
+            <Box
+              sx={{
+                width: 178,
+                height: 157,
+                marginRight: "3rem",
+                marginLeft: "3.8rem",
+                marginTop: "0.7rem",
+                // marginBottom: "0.1rem",
+                paddingRight: "0.7rem",
+                backgroundColor: props.col,
+                "&:hover": {
+                  backgroundColor: "white",
+                  opacity: [0.4, 0.5, 0.8],
+                },
+              }}
+            />
+            {/* <Col sm={6}>One of three columns</Col> */}
+            {/* <Col sm={6}>One of three columns</Col> */}
+            {/* <Col sm={6}>One of three columns</Col> */}
+          </Row>
+        </Container>
+      </Grow>
       {/* <Box
         sx={{
           width: 200,

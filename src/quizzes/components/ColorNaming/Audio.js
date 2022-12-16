@@ -7,7 +7,10 @@ import RecorderHooks from "./RecorderHook";
 export default function Audio(props) {
   const [isHooks, setHooks] = useState(false);
   const data = (url) => {
-    console.log(url);
+    // console.log(url);
+    if (props.generateUrl) {
+      props.handleUrl(url);
+    }
   };
   return (
     <>
@@ -20,6 +23,7 @@ export default function Audio(props) {
       {/* {isHooks ? ( */}
       <>
         <h3>Using Recorder</h3>
+
         <RecorderHooks fetchedUrl={data} newUrl={props.generateUrl} />
       </>
       {/* ) : (

@@ -1,4 +1,4 @@
-import React, { Fragment, useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
   Redirect,
@@ -14,23 +14,39 @@ import "./App.css";
 import Auth from "./users/pages/Auth";
 import ImagePack from "./quizzes/components/ImageDetect/ImagePack";
 import { AuthContext } from "./shared/context/auth-context";
-import Start from "./quizzes/components/ReadingTest/Start";
+// import Start from "./quizzes/components/ReadingTest/Start";
 import Pronounce from "./quizzes/components/Pronunciation/Pronounce";
-import ColorStart from "./quizzes/components/ColorNaming/ColorStart";
+// import ColorStart from "./quizzes/components/ColorNaming/ColorStart";
 import ColorResult from "./quizzes/components/ColorNaming/ColorResult";
+// import ResultPage from "./quizzes/components/ColorNaming/ResultPage";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [token, setToken] = useState(false);
-  const login = useCallback((token) => {
+  const login = useCallback((token, expirationDate) => {
     setToken(token);
     setIsLoggedIn(true);
+    localStorage.setItem(
+      "token",
+      JSON.stringify({
+        token: token,
+      })
+    );
   }, []);
   const logout = useCallback(() => {
+    setToken(null);
     setIsLoggedIn(false);
+    localStorage.removeItem("token");
   }, []);
 
   console.log(token);
+
+  useEffect(() => {
+    const storedData = JSON.parse(localStorage.getItem("token"));
+    if (storedData && storedData.token) {
+      login(storedData.token);
+    }
+  }, [login]);
 
   let routes;
 
@@ -44,6 +60,9 @@ const App = () => {
         <Route path="/quiz/1">
           <Pronounce />
         </Route>
+        {/* <Route path="/quiz/3/result">
+          <ResultPage />
+        </Route> */}
         <Route path="/quiz/3">
           <ColorResult />
           {/* <ColorStart /> */}
@@ -51,6 +70,7 @@ const App = () => {
         <Route path="/quiz/4">
           <ImagePack />
         </Route>
+
         <Redirect to="/" />
       </Switch>
     );

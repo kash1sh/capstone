@@ -24,6 +24,7 @@ export default function RecorderHooks(props) {
       audioRef.current.src = data.url;
     }
     // console.log(data.url);
+    // console.log(props.newUrl);
     props.fetchedUrl(data.url);
     if (props.newUrl) {
       stop();
@@ -43,7 +44,7 @@ export default function RecorderHooks(props) {
             setHasRecording(false);
           }
         }}
-        style={{ marginTop: "-20px" }}
+        style={{ marginTop: "-40px" }}
         variant="contained"
         startIcon={<MicIcon />}
       >
@@ -60,7 +61,7 @@ export default function RecorderHooks(props) {
                 else pause();
               }
             }}
-            style={{ margin: "10px" }}
+            style={{ marginTop: "-40px", marginLeft: "15px" }}
             variant="contained"
             startIcon={<MicOffIcon />}
           >
@@ -80,7 +81,7 @@ export default function RecorderHooks(props) {
           <Button
             type="button"
             onClick={togglePlay}
-            style={{ margin: "10px" }}
+            style={{ marginTop: "-150px", marginLeft: "115px" }}
             variant="contained"
           >
             Play/Pause

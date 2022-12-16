@@ -64,6 +64,12 @@
   height: 60px;
   /* border: 3px solid green; */
 }
+.chart-display {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: flex-start; */
+  /* align-items: center; */
+}
 @media screen and (max-width: 590px) {
   /* body {
     background-color: lightgreen;

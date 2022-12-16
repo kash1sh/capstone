@@ -53,7 +53,7 @@
 // }
 import React from "react";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+// import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 import "./styles.css";
 
@@ -88,15 +88,15 @@ const timerProps = {
   size: 210,
   strokeWidth: 6,
 };
-const Timer = ({ handleAudio }) => {
+const Timer = ({ handleAudio, time }) => {
   // const remainingTime = 2;
-  const history = useHistory();
+  // const history = useHistory();
   return (
     <div className="ini-time">
       <CountdownCircleTimer
         {...timerProps}
         strokeLinecap="square"
-        duration={5}
+        duration={time}
         colors="#EF798A"
         // colors={["#004777", "#F7B801", "#A30000", "#A30000"]}
         colorsTime={[40, 35, 20, 50]}

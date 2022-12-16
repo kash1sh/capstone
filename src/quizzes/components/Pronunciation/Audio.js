@@ -4,10 +4,13 @@ import Recorder from "voice-recorder-react";
 // import RecorderUI from "./RecorderUI";
 import RecorderHooks from "./RecorderHook";
 
-export default function Audio() {
+export default function Audio(props) {
   const [isHooks, setHooks] = useState(false);
   const data = (url) => {
-    console.log(url);
+    // if (props.generateUrl) {
+    props.handleUrl(url);
+    // }
+    // console.log(url);
   };
   return (
     <>
@@ -20,7 +23,11 @@ export default function Audio() {
       {/* {isHooks ? ( */}
       <>
         {/* <h3>Using Recorder</h3> */}
-        <RecorderHooks fetchedUrl={data} />
+        <RecorderHooks
+          fetchedUrl={data}
+          newUrl={props.generateUrl}
+          showButton={props.loadingHandler}
+        />
       </>
       {/* ) : (
         <>
