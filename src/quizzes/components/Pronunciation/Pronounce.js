@@ -19,9 +19,9 @@ import Modal from "../../../shared/components/UIElements/Modal";
 import { useEffect } from "react";
 
 const words = [
-  "This is reading sentence 1",
-  "This is reading sentence 2",
-  "This is reading sentence 3",
+  "This is a pronunciation test specially for dyslexic students",
+  "The main focus of this test is to improve the reading skills",
+  "This is one of the four tests that are conducted in this site",
 ];
 function ResultPage(props) {
   const [showModal, setShowModal] = useState(false);
@@ -155,7 +155,7 @@ const Pronounce = () => {
       <Card
         className="recording-card"
         variant="outlined"
-        sx={{ minWidth: 275 }}
+        sx={{ minWidth: 305 }}
       >
         <div className="card-div">
           <div className="content-word">

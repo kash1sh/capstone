@@ -2,7 +2,7 @@
   /* display: flex; */
   /* justify-content: center; */
   /* margin-left: 30%; */
-  width: 30%;
+  width: 44%;
   /* display: flex; */
   margin: 9% auto;
   padding-top: 1%;
@@ -46,6 +46,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  padding-right: 2;
 }
 .btn-style {
   margin-top: 3%;

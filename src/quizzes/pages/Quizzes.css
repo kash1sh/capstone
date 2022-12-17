@@ -70,6 +70,12 @@
   /* justify-content: flex-start; */
   /* align-items: center; */
 }
+
+.modaal-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 @media screen and (max-width: 590px) {
   /* body {
     background-color: lightgreen;
