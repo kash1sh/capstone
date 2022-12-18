@@ -33,7 +33,7 @@ function ResultPage(props) {
 
   const { Confidence, AccuracyScore, CompletenessScore, PronScore } =
     props.data;
-  let value = Math.round(AccuracyScore);
+  let value = Math.round(Confidence * 100);
   useEffect(() => {
     const submitHandler = async () => {
       try {
@@ -80,22 +80,24 @@ function ResultPage(props) {
               </Tr>
             </Thead>
             <Tbody>
+              {/*
               <Tr>
                 <Td>Accuracy Score</Td>
                 <Td>{AccuracyScore}</Td>
               </Tr>
+        */}
               <Tr>
-                <Td>Confidence</Td>
+                <Td>Score</Td>
                 <Td>{Math.round(Confidence * 100)}</Td>
               </Tr>
-              <Tr>
+              {/* <Tr>
                 <Td>Completeness</Td>
                 <Td>{CompletenessScore}</Td>
               </Tr>
               <Tr>
                 <Td>Pronounciation Score</Td>
                 <Td>{PronScore}</Td>
-              </Tr>
+              </Tr> */}
             </Tbody>
           </Table>
         </Modal>
@@ -132,7 +134,7 @@ const Pronounce = () => {
       formData.append("audio", file);
       formData.append(
         "text",
-        "this is reading sentence 1. This is reading sentence 2. This is reading sentence 3"
+        "This is a pronunciation test specially for dyslexic students. The main focus of this test is to improve the reading skills. This is one of the four tests that are conducted in this site"
       );
       // formData.append("DisplayText",);
       const responseData = await sendRequest(

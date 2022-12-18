@@ -81,6 +81,9 @@ const App = () => {
           <Auth />
           {/* <Quiz quiz={quiz} /> */}
         </Route>
+        <Route path="/" exact>
+          <Quizzes />
+        </Route>
         <Redirect to="/auth" />
       </Switch>
     );

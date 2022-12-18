@@ -35,7 +35,7 @@ const AllScore = (props) => {
 
   useEffect(() => {
     const submitHandler = async () => {
-      console.log("Sending request3");
+      // console.log("Sending request3");
       try {
         const responseData = await sendRequest(
           "http://localhost:8000/score/?type=Reading%20Comprehension%20Test",
@@ -59,7 +59,7 @@ const AllScore = (props) => {
   }, [sendRequest, auth.token]);
   useEffect(() => {
     const submitHandler = async () => {
-      console.log("Sending request1");
+      // console.log("Sending request1");
       try {
         const responseData = await sendRequest(
           "http://localhost:8000/score/?type=Object%20Classification%20Test",
@@ -79,7 +79,7 @@ const AllScore = (props) => {
       } catch (err) {
         console.log(err);
       }
-      console.log("Sending request2");
+      // console.log("Sending request2");
     };
 
     submitHandler();
@@ -110,7 +110,7 @@ const AllScore = (props) => {
       } catch (err) {
         console.log(err);
       }
-      console.log("Sending request2");
+      // console.log("Sending request2");
     };
 
     submitHandler();
@@ -141,7 +141,7 @@ const AllScore = (props) => {
       } catch (err) {
         console.log(err);
       }
-      console.log("Sending request2");
+      // console.log("Sending request2");
     };
 
     submitHandler();
@@ -172,7 +172,7 @@ const AllScore = (props) => {
       } catch (err) {
         console.log(err);
       }
-      console.log("Sending request2");
+      // console.log("Sending request2");
     };
 
     submitHandler();
@@ -222,15 +222,15 @@ const AllScore = (props) => {
     data: [
       {
         type: "column",
-        // dataPoints: objectRef.current,
-        dataPoints: [
-          { label: "1", y: 10 },
-          { label: "2", y: 35 },
-          { label: "3", y: 50 },
-          { label: "4", y: 55 },
-          { label: "5", y: 45 },
-          { label: "6", y: 85 },
-        ],
+        dataPoints: objectRef.current,
+        // dataPoints: [
+        //   { label: "1", y: 10 },
+        //   { label: "2", y: 35 },
+        //   { label: "3", y: 50 },
+        //   { label: "4", y: 55 },
+        //   { label: "5", y: 45 },
+        //   { label: "6", y: 85 },
+        // ],
         // dataPoints: [
         //   { label: "Apple", y: 10 },
         //   { label: "Orange", y: 15 },
@@ -257,15 +257,15 @@ const AllScore = (props) => {
     data: [
       {
         type: "column",
-        // dataPoints: readRef.current,
-        dataPoints: [
-          { label: "1", y: 40 },
-          { label: "2", y: 15 },
-          { label: "3", y: 65 },
-          { label: "4", y: 88 },
-          { label: "5", y: 93 },
-          { label: "6", y: 65 },
-        ],
+        dataPoints: readRef.current,
+        // dataPoints: [
+        //   { label: "1", y: 40 },
+        //   { label: "2", y: 15 },
+        //   { label: "3", y: 65 },
+        //   { label: "4", y: 88 },
+        //   { label: "5", y: 93 },
+        //   { label: "6", y: 65 },
+        // ],
       },
     ],
   };
@@ -285,15 +285,15 @@ const AllScore = (props) => {
     data: [
       {
         type: "column",
-        // dataPoints: rapidRef.current,
-        dataPoints: [
-          { label: "1", y: 10 },
-          { label: "2", y: 45 },
-          { label: "3", y: 65 },
-          { label: "4", y: 50 },
-          { label: "5", y: 80 },
-          { label: "6", y: 92 },
-        ],
+        dataPoints: rapidRef.current,
+        // dataPoints: [
+        //   { label: "1", y: 10 },
+        //   { label: "2", y: 45 },
+        //   { label: "3", y: 65 },
+        //   { label: "4", y: 50 },
+        //   { label: "5", y: 80 },
+        //   { label: "6", y: 92 },
+        // ],
       },
     ],
   };
@@ -369,7 +369,7 @@ const LineScore = (props) => {
 
   useEffect(() => {
     const submitHandler = async () => {
-      console.log("Sending request3");
+      // console.log("Sending request3");
       try {
         const responseData = await sendRequest(
           "http://localhost:8000/score/?type=Reading%20Comprehension%20Test",
@@ -393,7 +393,7 @@ const LineScore = (props) => {
   }, [sendRequest, auth.token]);
   useEffect(() => {
     const submitHandler = async () => {
-      console.log("Sending request1");
+      // console.log("Sending request1");
       try {
         const responseData = await sendRequest(
           "http://localhost:8000/score/?type=Object%20Classification%20Test",
@@ -413,7 +413,7 @@ const LineScore = (props) => {
       } catch (err) {
         console.log(err);
       }
-      console.log("Sending request2");
+      // console.log("Sending request2");
     };
 
     submitHandler();
@@ -444,7 +444,7 @@ const LineScore = (props) => {
       } catch (err) {
         console.log(err);
       }
-      console.log("Sending request2");
+      // console.log("Sending request2");
     };
 
     submitHandler();
@@ -475,7 +475,7 @@ const LineScore = (props) => {
       } catch (err) {
         console.log(err);
       }
-      console.log("Sending request2");
+      // console.log("Sending request2");
     };
 
     submitHandler();
@@ -506,7 +506,7 @@ const LineScore = (props) => {
       } catch (err) {
         console.log(err);
       }
-      console.log("Sending request2");
+      // console.log("Sending request2");
     };
 
     submitHandler();
@@ -561,15 +561,15 @@ const LineScore = (props) => {
       {
         type: "line",
         toolTipContent: "Attempt {x}: {y}%",
-        // dataPoints: objectRef.current,
-        dataPoints: [
-          { label: "1", y: 10 },
-          { label: "2", y: 35 },
-          { label: "3", y: 50 },
-          { label: "4", y: 55 },
-          { label: "5", y: 45 },
-          { label: "6", y: 85 },
-        ],
+        dataPoints: objectRef.current,
+        // dataPoints: [
+        //   { label: "1", y: 10 },
+        //   { label: "2", y: 35 },
+        //   { label: "3", y: 50 },
+        //   { label: "4", y: 55 },
+        //   { label: "5", y: 45 },
+        //   { label: "6", y: 85 },
+        // ],
         // dataPoints: [
         //   { label: "Apple", y: 10 },
         //   { label: "Orange", y: 15 },
@@ -601,15 +601,15 @@ const LineScore = (props) => {
       {
         type: "line",
         toolTipContent: "Attempt {x}: {y}%",
-        // dataPoints: readRef.current,
-        dataPoints: [
-          { label: "1", y: 40 },
-          { label: "2", y: 15 },
-          { label: "3", y: 65 },
-          { label: "4", y: 88 },
-          { label: "5", y: 93 },
-          { label: "6", y: 65 },
-        ],
+        dataPoints: readRef.current,
+        // dataPoints: [
+        //   { label: "1", y: 40 },
+        //   { label: "2", y: 15 },
+        //   { label: "3", y: 65 },
+        //   { label: "4", y: 88 },
+        //   { label: "5", y: 93 },
+        //   { label: "6", y: 65 },
+        // ],
       },
     ],
   };
@@ -634,15 +634,15 @@ const LineScore = (props) => {
       {
         type: "line",
         toolTipContent: "Attempt {x}: {y}%",
-        // dataPoints: rapidRef.current,
-        dataPoints: [
-          { label: "1", y: 10 },
-          { label: "2", y: 45 },
-          { label: "3", y: 65 },
-          { label: "4", y: 50 },
-          { label: "5", y: 80 },
-          { label: "6", y: 92 },
-        ],
+        dataPoints: rapidRef.current,
+        // dataPoints: [
+        //   { label: "1", y: 10 },
+        //   { label: "2", y: 45 },
+        //   { label: "3", y: 65 },
+        //   { label: "4", y: 50 },
+        //   { label: "5", y: 80 },
+        //   { label: "6", y: 92 },
+        // ],
       },
     ],
   };
@@ -726,7 +726,7 @@ const Quizzes = () => {
           <div className="modaal-head">
             Your Result
             <div className="btn-header">
-              <Button onClick={lineHandler}>Line Chart</Button>
+              <Button onClick={lineHandler}>Switch Chart</Button>
             </div>
           </div>
         }
